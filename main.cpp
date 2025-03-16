@@ -19,8 +19,6 @@ std::vector<long long> BFS(const Graph<T>& graph, const T& start_node) {
     q.pop();
     for (const auto& neighbor : graph[cur_node]) {
       if (distances[neighbor] != -1) {
-        distances[neighbor] =
-            std::min(distances[neighbor], distances[cur_node] + 1);
         continue;
       }
 
